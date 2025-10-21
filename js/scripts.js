@@ -119,7 +119,7 @@ function renderCadastroPage() {
 const app = document.getElementById('app');
 
 function router() {
-    // Pega o hash atual da URL (ou usa '#inicio' como padrão)
+    // Pega o hash atual da URL
     const hash = window.location.hash || '#inicio';
 
     switch (hash) {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initEventListeners() {
-    // Só cuida dos eventos dinâmicos das páginas (ex: formulário)
+    // Só cuida dos eventos dinâmicos das páginas
     const cadastroForm = document.getElementById('cadastro-form');
     if (cadastroForm) {
         cadastroForm.addEventListener('submit', function(event) {
@@ -301,4 +301,5 @@ function isValidBirthdate(dateString) {
 window.addEventListener('DOMContentLoaded', router);
 
 // Roda o roteador quando o hash na URL mudar
+
 window.addEventListener('hashchange', router);
